@@ -1,0 +1,47 @@
+#validation-form {
+    max-width: 30rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.vertical {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stretch {
+    justify-content: space-between;
+}
+
+label {
+    flex: 1;
+}
+
+span {
+    color: red;
+}
+
+input {
+    flex: 2;
+}
+
+.error {
+    color: red;
+    margin-left: 10rem;
+}
+
+.help {
+    flex: 1;
+    color: grey;
+}
+
+.flex > .error {
+    flex: 2;
+    margin-left: 0;
+}
+
+.hidden {
+    display: none;
+}

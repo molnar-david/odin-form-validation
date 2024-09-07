@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form action="#" method="post" id="validation-form" novalidate>
+        <div class="flex vertical">
+            <div class="flex-item">
+                <div class="flex stretch">
+                    <label for="email"><span>*</span>E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="error hidden">Please enter a valid e-mail address.</div>
+            </div>
+            <div class="flex-item">
+                <div class="flex stretch">
+                    <label for="country"><span>*</span>Country:</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div class="error hidden">Please enter a country.</div>
+            </div>
+            <div class="flex-item">
+                <div class="flex stretch">
+                    <label for="zip-code"><span>*</span>ZIP Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" required>
+                </div>
+                <div class="error hidden">Please enter a valid ZIP Code</div>
+            </div>
+            <div class="flex-item">
+                <div class="flex stretch">
+                    <label for="password"><span>*</span>Password:</label>
+                    <input type="text" id="password" name="password" required>
+                </div>
+                <div class="flex">
+                    <div class="help">Minimum 5 characters</div>
+                    <div class="error hidden">Please enter a password</div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="flex stretch">
+                    <label for="confirm-password"><span>*</span>Confirm Password:</label>
+                    <input type="text" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="error hidden">Entered passwords must match</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
