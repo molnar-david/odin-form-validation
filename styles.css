@@ -27,7 +27,7 @@ input {
     flex: 2;
 }
 
-.error {
+div.error {
     color: red;
     margin-left: 10rem;
 }
@@ -37,9 +37,13 @@ input {
     color: grey;
 }
 
-.flex > .error {
+.flex > div.error {
     flex: 2;
     margin-left: 0;
+}
+
+input.error {
+    border-color: red;
 }
 
 .hidden {
