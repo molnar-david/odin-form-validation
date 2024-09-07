@@ -83,7 +83,7 @@ password.addEventListener("blur", (event) => {
         password.classList.add("error");
     }
 
-    if (password.value !== confirmPassword.value) {
+    if (password.value !== confirmPassword.value && !confirmPassword.validity.valueMissing) {
         confirmPasswordError.classList.remove("hidden");
         confirmPassword.classList.add("error");
         confirmPassword.setCustomValidity("passwordMismatch");
