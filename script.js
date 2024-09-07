@@ -86,6 +86,7 @@ password.addEventListener("blur", (event) => {
     if (password.value !== confirmPassword.value) {
         confirmPasswordError.classList.remove("hidden");
         confirmPassword.classList.add("error");
+        confirmPassword.setCustomValidity("passwordMismatch");
     }
 });
 
@@ -98,6 +99,7 @@ password.addEventListener("keydown", (event) => {
     if (password.value === confirmPassword.value) {
         confirmPasswordError.classList.add("hidden");
         confirmPassword.classList.remove("error");
+        confirmPassword.setCustomValidity("");
     }
 });
 
@@ -110,6 +112,7 @@ password.addEventListener("keyup", (event) => {
     if (password.value === confirmPassword.value) {
         confirmPasswordError.classList.add("hidden");
         confirmPassword.classList.remove("error");
+        confirmPassword.setCustomValidity("");
     }
 });
 
@@ -117,6 +120,7 @@ confirmPassword.addEventListener("blur", (event) => {
     if (password.value !== confirmPassword.value) {
         confirmPasswordError.classList.remove("hidden");
         confirmPassword.classList.add("error");
+        confirmPassword.setCustomValidity("passwordMismatch");
     }
 });
 
@@ -124,6 +128,7 @@ confirmPassword.addEventListener("keydown", (event) => {
     if (password.value === confirmPassword.value) {
         confirmPasswordError.classList.add("hidden");
         confirmPassword.classList.remove("error");
+        confirmPassword.setCustomValidity("");
     }
 });
 
@@ -131,5 +136,21 @@ confirmPassword.addEventListener("keyup", (event) => {
     if (password.value === confirmPassword.value) {
         confirmPasswordError.classList.add("hidden");
         confirmPassword.classList.remove("error");
+        confirmPassword.setCustomValidity("");
+    }
+});
+
+const registerBtn = document.getElementById("register-btn");
+const registerError = document.getElementById("register-error");
+const registerSuccess = document.getElementById("register-success");
+registerBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if(document.querySelector("input:invalid")) {
+        registerSuccess.classList.add("hidden");
+        registerError.classList.remove("hidden");
+    } else {
+        registerSuccess.classList.remove("hidden");
+        registerError.classList.add("hidden");
     }
 });

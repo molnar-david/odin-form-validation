@@ -23,12 +23,18 @@ span {
     color: red;
 }
 
-input {
+input:not([type="submit"]) {
     flex: 2;
 }
 
 div.error {
     color: red;
+}
+
+#email-error,
+#country-error,
+#zip-code-error,
+#confirm-password-error {
     margin-left: 10rem;
 }
 
@@ -48,4 +54,16 @@ input.error {
 
 .hidden {
     display: none;
+}
+
+#register-btn {
+    width: 7rem;
+}
+
+form > .flex > div.flex-item:last-child {
+    margin-left: 10rem;
+}
+
+.success {
+    color: green;
 }
